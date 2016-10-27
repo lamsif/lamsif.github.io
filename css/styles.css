@@ -1,0 +1,605 @@
+@font-face {
+    font-family: 'Kuro';
+    src: url('../fonts/Kuro.otf');
+}
+
+@font-face {
+    font-family: 'Rabusto';
+    src: url('../fonts/Rabusto.otf');
+}
+/*---------------------------------*/
+@media screen and (max-width: 480px) {
+    .responsive {
+        content: "small";
+    }
+
+    .aboutContent {
+        padding-top: 50px;
+    }
+
+    .aboutHeader {
+        visibility: hidden;
+    }
+
+    .aboutHello {
+        font-size: 23px;
+    }
+
+    .aboutTitle {
+        font-size: 43px;
+        top: -2px;
+    }
+
+    .titleSplash {
+        width: 330px;
+        height: auto;
+    }
+    
+    .workTitle h3 {
+        font-size: 20px;
+    }
+
+    .workLink, .workZoom {
+        top: 20%;
+    }
+
+    .skillsBorder {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 700px) {
+    .responsive {
+        content: "small";
+    }
+
+    .aboutContent {
+        padding-top: 50px;
+    }
+
+    .aboutHeader {
+        visibility: hidden;
+    }
+
+    .aboutHello {
+        font-size: 23px;
+    }
+
+    .aboutTitle {
+        font-size: 43px;
+        top: -2px;
+    }
+
+    .titleSplash {
+        width: 330px;
+        height: auto;
+    }
+    
+    .workTitle h3 {
+        font-size: 30px;
+    }
+
+    .workLink, .workZoom {
+        top: 35%;
+    }
+
+    .skillsBorder {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .responsive {
+        content: "wide";
+    }
+
+    .aboutContent {
+        padding-top: 100px;
+    }
+
+    .aboutHeader {
+        visibility: visible;
+    }
+
+    .aboutHello {
+        font-size: 30px;
+    }
+
+    .aboutTitle {
+        font-size: 68px;
+        top: 5px;
+    }
+
+    .titleSplash {
+        width: 515px;
+        height: auto;
+    }
+
+    .workTitle h3 {
+        font-size: 30px;
+    }
+
+    .workLink, .workZoom {
+        top: 35%;
+    }
+
+    .skillsBorder {
+        width: 25%;
+        margin-left: 6.25%;
+    }
+}
+/*---------------------------------*/
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------*/
+#about {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #2E383F;
+}
+
+.aboutHeader {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    margin-left: -240px;
+    z-index: 2;
+}
+
+.aboutHeader ul{
+    list-style-type: none;
+}
+
+.aboutHeader li{
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+
+.aboutHeader a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Kuro';
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.aboutHeader a:hover{
+    color: #738b9b;
+}
+
+.aboutBar {
+    visibility: hidden;
+    position: absolute;
+    transition: top 0.25s, left 0.25s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.aboutContent {
+    position: relative;
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.aboutHello {
+    color: #FFFFFF;
+    font-family: 'Kuro';
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+.aboutTitle {
+    color: #FFFFFF;
+    font-family: 'Rabusto';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.aboutContent p {
+    color: #FFFFFF;
+    font-family: 'Kuro';
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.aboutPic {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transform: scale(0, 0);
+    transition: transform 0.5s;
+}
+
+.socialButtons img{
+    width: 40px;
+    opacity: 0;
+}
+
+.titleSplash {
+    margin: -20px 0px 5px -10px;
+    opacity: 0;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scale(0, 0);
+    transition: transform 0.5s;
+}
+
+.typed-cursor {
+    display: none;
+}
+/*---------------------------------*/
+.menu {
+    position: fixed;
+    top: 15px;
+    right: -80px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu img {
+    width: inherit;
+    height: inherit;
+}
+/*---------------------------------*/
+.panel {
+    visibility: hidden;
+    position: fixed;
+    width: 0;
+    height: 0;
+    top: -50vh;
+    right: -50vw;
+    border-radius: 75%;
+    background-color: #1E2022;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.panelClose {
+    position: fixed;
+    top: 20px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.panelClose img {
+    width: inherit;
+    height: inherit;
+}
+
+.panelHeader {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    margin: auto;
+    top: -200px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: top 0.5s ease-out;
+}
+
+.panelHeader ul{
+    list-style-type: none;
+}
+
+.panelHeader li{
+    width: fit-content;
+    height: fit-content;
+    margin: 25px auto;
+}
+
+.panelHeader a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Kuro';
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.panelHeader a:hover{
+    background-color: #5b6167;
+    padding: 15px 25px;
+    border-radius: 60px;
+}
+/*---------------------------------*/
+#work {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #07617D;
+}
+
+.workHeader h2 {
+    position: relative;
+    color: #FFFFFF;
+    font-family: 'Kuro';
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.workContent {
+    position: relative;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.workBorder {
+    width: 100%;
+    position: relative;
+    background-color: #03313f;
+    overflow: hidden;
+    margin-top: 40px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
+}
+
+.workBG {
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
+    z-index: 1;
+}
+
+.workLink {
+    position: absolute;
+    left: 50px;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+.workZoom {
+    position: absolute;
+    left: -50px;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
+    z-index: 2;
+}
+
+.workTitle {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    bottom: -90px;
+    background-color: #03313f;
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
+    z-index: 2;
+}
+
+.workTitle h3 {
+    color: #FFFFFF;
+    font-family: 'Kuro';
+    padding-top: 15px;
+}
+
+.workTitle small {
+    color: #e3e3e3;
+    margin-top: 0px;
+}
+
+.workBorder:hover {
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.35);
+}
+
+.workBorder:hover .workTitle {
+    bottom: 0;
+}
+
+.workBorder:hover .workBG {
+    bottom: 90px;
+}
+
+.workBorder:hover .workLink, .workBorder:hover .workZoom {
+    opacity: 1;
+}
+
+.workBorder a {
+    cursor: pointer;
+}
+
+.modal-body img {
+    width: 100%;
+}
+/*---------------------------------*/
+#skills {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #ECECEB;
+}
+
+.skillsHeader h2 {
+    position: relative;
+    color: #31312b;
+    font-family: 'Kuro';
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.skillsContent {
+    position: relative;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.skillsBorder {
+    background-color: #bcbcad;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
+}
+
+.skillsBorder img {
+    height: 80px;
+    margin-top: 20px;
+}
+
+.skillsBorder h3 {
+    width: 100%;
+    color: #31312b;
+    font-family: 'Kuro';
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.skillsBorder p {
+    color: #31312b;
+    font-family: 'Kuro';
+    font-size: 16px;
+}
+
+.skillsBorder:hover {
+    transform: scale(1.025, 1.025);
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.2);
+}
+/*---------------------------------*/
+#contact {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #F9A828;
+}
+
+.contactHeader h2 {
+    position: relative;
+    color: #ffffff;
+    font-family: 'Kuro';
+    font-size: 30px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.contactHeader h3 {
+    width: 100%;
+    color: #f3f3f3;
+    font-family: 'Kuro';
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contactContent {
+    position: relative;
+    margin-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+input:not([type=submit]), textarea {
+    width: 100%;
+    border: 1px solid #442d0a;
+    padding: 5px;
+    margin: 0 0 10px 0;
+    background: #F9A828;
+	font-family: 'Kuro';
+    font-size: 15px;
+    color: #442d0a;
+    position: relative;
+    z-index: 1;
+    transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+input:not([type=submit]) {
+    border-radius: 60px;
+}
+
+textarea {
+    border-radius: 15px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background: #442d0a;
+    color: #ffffff;
+    margin-top: 25px; 
+}
+
+label {
+    color: #442d0a;
+    font-family: 'Kuro';
+    font-size: 15px;
+    position: absolute;
+    z-index: 0;
+    margin-left: 10px;
+}
+
+button {
+    border: 1px solid #442d0a;
+    background-color: #F9A828;
+    padding: 10px 15px 10px 15px;
+    color: #442d0a;
+    font-family: 'Kuro';
+    font-size: 15px;
+    border-radius: 60px;
+}
+
+button:hover {
+    border: 1px solid #442d0a;
+    background-color: #442d0a;
+    color: #ffffff;
+}
+
+button:focus {
+    outline: none;
+    border: 1px solid #302c23;
+    background-color: #302c23;
+    color: #ffffff;
+}
+
+::-webkit-input-placeholder {
+    color: #442d0a;
+    font-family: 'Kuro';
+    font-size: 15px;
+}
+
+::-moz-placeholder {
+    color: #442d0a;
+    font-family: 'Kuro';
+    font-size: 15px;
+}
+
+:-ms-input-placeholder {
+    color: #442d0a;
+    font-family: 'Kuro';
+    font-size: 15px;
+}
+
+:-moz-placeholder {
+    color: #442d0a;
+    font-family: 'Kuro';
+    font-size: 15px;
+}

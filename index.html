@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lamraoui Sifeddine Portfolio - Full Stack Web Developer & UI/UX Designer</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="Lamraoui Sifeddine" />
+        <!-------------------------------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/animate.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-------------------------------------->
+        <noscript>
+            <div style="position: fixed; width: 100vw; height: 100vh; background-color: #1a2533; z-index: 4;">
+                <div style="position: absolute; width: fit-content; height: fit-content; margin: auto; top: -25%; left: 0; bottom: 0; right: 0;">
+                    <h2 style="color: #ffffff; font-family: 'Kuro'; text-align: center;">Your browser does not support JavaScript!</h2>
+                </div>
+            </div>
+        </noscript>
+    </head>
+    <body class="responsive">
+        <div class="menu">
+            <img src="img/menu.png"></img>
+        </div>
+        <!-------------------------------------->
+        <div class="panel">
+            <div class="panelClose">
+                <img src="img/close.png"></img>
+            </div>
+            <div class="panelHeader">
+                <ul>
+                    <li><a onclick="hidePanel('#about');">About</a></li>
+                    <li><a onclick="hidePanel('#work');">Work</a></li>
+                    <li><a onclick="hidePanel('#skills');">Skills</a></li>
+                    <li><a onclick="hidePanel('#contact');">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div id="about">
+            <div id="particles-js"></div>
+            <div class="aboutHeader">
+                <ul>
+                    <li><a onclick="scrollTo('#about');">About</a></li>
+                    <li><a onclick="scrollTo('#work');">Work</a></li>
+                    <li><a onclick="scrollTo('#skills');">Skills</a></li>
+                    <li><a onclick="scrollTo('#contact');">Contact</a></li>
+                </ul>
+            </div>
+            <div class="aboutBar">
+                <img src="img/header-hover.png"></img>
+            </div>
+            <div class="aboutContent">
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <h2 class="aboutHello"></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img class="titleSplash" src="img/splash.png"></img>
+                        <h1 class="aboutTitle"></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8">
+                        <p>I’m a Full Stack Web Developer & UI/UX Designer.<p/>
+                        <p>I build responsive and interactive websites and apps.<p/>
+                        <p>I live and work in Algeria, mostly freelancing with clients all over the world.<p/>
+                        <p>Feel free to check out my skills and work, if you want to hire me you can contact me below.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <img class="aboutPic" src="img/me.png"></img>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8">
+                        <div class="socialButtons">
+                            <a href="https://github.com/siif0101" target="_blank"><img src="img/github.png"></img></a>
+                            <a href="#" target="_blank"><img src="img/dribbble.png"></img></a>
+                            <a href="#" target="_blank"><img src="img/behance.png"></img></a>
+                            <a href="#" target="_blank"><img src="img/linkedin.png"></img></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div id="work">
+            <div class="workHeader">
+                <h2>Work</h2>
+            </div>
+            <div class="workContent">
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-4">
+                        <div class="workBorder">
+                            <a target="_blank" href="http://lamsif.com"><img class="workLink" src="img/link.png"></img></a>
+                            <a data-toggle="modal" data-target="#modal1"><img class="workZoom" src="img/zoom.png"></img></a>
+                            <img class="workBG" src="img/bg.jpeg"></img>
+                            <div class="workTitle">
+                                <h3>LamSif Portfolio<br/><small>(HTML/CSS, Boostrap, JQuery)</small></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4">
+                        <div class="workBorder">
+                            <a target="_blank" href="http://siirol.com"><img class="workLink" src="img/link.png"></img></a>
+                            <a data-toggle="modal" data-target="#modal2"><img class="workZoom" src="img/zoom.png"></img></a>
+                            <img class="workBG" src="img/bg.jpeg"></img>
+                            <div class="workTitle">
+                                <h3>Siirol Portfolio<br/><small>(HTML/CSS, Boostrap, Wordpress)</small></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-4">
+                        <div class="workBorder">
+                            <a target="_blank" href="http://teamim.github.io"><img class="workLink" src="img/link.png"></img></a>
+                            <a data-toggle="modal" data-target="#modal3"><img class="workZoom" src="img/zoom.png"></img></a>
+                            <img class="workBG" src="img/bg.jpeg"></img>
+                            <div class="workTitle">
+                                <h3>Team IM App<br/><small>(HTML/CSS, Boostrap, AngularJS)</small></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------------->
+                <div id="modal1" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">LamSif Portfolio</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/bg.jpeg"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------------->
+                <div id="modal2" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Siirol Portfolio</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/bg.jpeg"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------------------->
+                <div id="modal3" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Team IM App</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/bg.jpeg"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div id="skills">
+            <div class="skillsHeader">
+                <h2>Skills</h2>
+            </div>
+            <div class="skillsContent">
+                <div class="row">
+                    <div class="col-xs-4 skillsBorder">
+                        <img src="img/front-end.png"></img>
+                        <h3>Front-end</h3>
+                        <p>HTML5<br/>CSS3<br/>JavaScript<br/>JQuery<br/>Bootstrap<br/>Sass<br/>AngularJS<br/>Qunit<br/>Wordpress</p>
+                    </div>
+                    <div class="col-xs-4 skillsBorder">
+                        <img src="img/back-end.png"></img>
+                        <h3>Back-end</h3>
+                        <p>NodeJS<br/>ExpressJS<br/>PHP<br/>Lavarel<br/>Python<br/>Flask<br/>MySQL<br/>MongoDB</p>
+                    </div>
+                    <div class="col-xs-4 skillsBorder">
+                        <img src="img/tools.png"></img>
+                        <h3>Tools</h3>
+                        <p>Adobe Photoshop<br/>Git<br/>Eclipse IDE<br/>Visual Studio<br/>Android Studio<br/>AWS<br/>OpenShift</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div id="contact">
+            <div class="contactHeader">
+                <h2>Contact</h2>
+                <h3>Tel: (+213) 698403556</h3>
+            </div>
+            <div class="contactContent">
+                <form>
+                    <div class="row">
+                        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label>Full Name</label>
+                                    <input type="text" name="fullname" placeholder="Full Name" />
+                                </div>
+                                <div class="col-xs-12">
+                                    <label>Email</label>
+                                    <input type="email" name="email" placeholder="Email" />
+                                </div>
+                                <div class="col-xs-12">
+                                    <label>Budget ($)</label>
+                                    <input type="text" name="budget" placeholder="Budget ($)" />
+                                </div>
+                                <div class="col-xs-12">
+                                    <label>Message</label>
+                                    <textarea rows="5" name="message" placeholder="Message"></textarea>
+                                </div>
+                                <div class="col-xs-12">
+                                    <button type="submit">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <script src="js/particles.min.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
