@@ -1,7 +1,10 @@
 var responsive;
 var isMenuOut;
 //---------------------------------
-$(document).ready(function() {
+window.onload = function() {
+    document.body.removeChild(document.getElementById("loading"));
+    document.body.style.overflowY = "visible";
+    //---------------------------------
     setVars();
     setResize();
     setMenu();
@@ -9,7 +12,7 @@ $(document).ready(function() {
     setAboutBar();
     emitParticles();
     setAnimations();
-});
+};
 //---------------------------------
 function setVars() {
     responsive = $(document.body).css("content").replace(/"/g, '');
