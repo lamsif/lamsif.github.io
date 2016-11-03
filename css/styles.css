@@ -136,6 +136,7 @@ body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
+	font-family: 'Kuro';
 }
 
 body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
@@ -171,7 +172,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .aboutHeader a{
     text-decoration: none;
     color: #FFFFFF;
-    font-family: 'Kuro';
     font-size: 22px;
     cursor: pointer;
 }
@@ -196,7 +196,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 
 .aboutHello {
     color: #FFFFFF;
-    font-family: 'Kuro';
     margin-bottom: 20px;
     height: 35px;
 }
@@ -212,7 +211,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 
 .aboutContent p {
     color: #FFFFFF;
-    font-family: 'Kuro';
     font-size: 20px;
     line-height: 1;
     margin-bottom: 10px;
@@ -316,7 +314,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .panelHeader a{
     text-decoration: none;
     color: #FFFFFF;
-    font-family: 'Kuro';
     font-size: 50px;
     cursor: pointer;
 }
@@ -337,7 +334,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .workHeader h2 {
     position: relative;
     color: #FFFFFF;
-    font-family: 'Kuro';
     font-size: 30px;
     text-align: center;
     padding-top: 40px;
@@ -400,7 +396,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 
 .workTitle h3 {
     color: #FFFFFF;
-    font-family: 'Kuro';
     padding-top: 15px;
 }
 
@@ -443,7 +438,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .skillsHeader h2 {
     position: relative;
     color: #31312b;
-    font-family: 'Kuro';
     font-size: 30px;
     text-align: center;
     padding-top: 40px;
@@ -471,7 +465,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .skillsBorder h3 {
     width: 100%;
     color: #31312b;
-    font-family: 'Kuro';
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -479,7 +472,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 
 .skillsBorder p {
     color: #31312b;
-    font-family: 'Kuro';
     font-size: 16px;
 }
 
@@ -498,7 +490,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .contactHeader h2 {
     position: relative;
     color: #ffffff;
-    font-family: 'Kuro';
     font-size: 30px;
     text-align: center;
     padding-top: 40px;
@@ -507,7 +498,6 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .contactHeader h3 {
     width: 100%;
     color: #f3f3f3;
-    font-family: 'Kuro';
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
@@ -526,7 +516,6 @@ input:not([type=submit]), textarea {
     padding: 5px;
     margin: 0 0 10px 0;
     background: #F9A828;
-	font-family: 'Kuro';
     font-size: 15px;
     color: #442d0a;
     position: relative;
@@ -551,7 +540,6 @@ input:focus, textarea:focus {
 
 label {
     color: #442d0a;
-    font-family: 'Kuro';
     font-size: 15px;
     position: absolute;
     z-index: 0;
@@ -563,7 +551,6 @@ button {
     background-color: #F9A828;
     padding: 10px 15px 10px 15px;
     color: #442d0a;
-    font-family: 'Kuro';
     font-size: 15px;
     border-radius: 60px;
 }
@@ -583,25 +570,21 @@ button:focus {
 
 ::-webkit-input-placeholder {
     color: #442d0a;
-    font-family: 'Kuro';
     font-size: 15px;
 }
 
 ::-moz-placeholder {
     color: #442d0a;
-    font-family: 'Kuro';
     font-size: 15px;
 }
 
 :-ms-input-placeholder {
     color: #442d0a;
-    font-family: 'Kuro';
     font-size: 15px;
 }
 
 :-moz-placeholder {
     color: #442d0a;
-    font-family: 'Kuro';
     font-size: 15px;
 }
 /*---------------------------------*/
