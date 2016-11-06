@@ -6,6 +6,7 @@ window.onload = function() {
     document.body.style.overflowY = "visible";
     //---------------------------------
     setVars();
+    setResponsive();
     setResize();
     setMenu();
     setPanel();
@@ -15,13 +16,21 @@ window.onload = function() {
 };
 //---------------------------------
 function setVars() {
-    responsive = $(document.body).css("content").replace(/"/g, '');
     isMenuOut = true;
+}
+
+function setResponsive() {
+    var width = $(window).width();
+    if (width < 768) {
+        responsive = "small";
+    } else {
+        responsive = "wide";
+    }
 }
 
 function setResize() {
     $(window).resize(function() {
-        responsive = $(document.body).css("content").replace(/"/g, '');
+        setResponsive();
         //---------------------------------
         if (responsive == "wide") {
             $(".aboutHeader").css({"top": "25px"});
@@ -69,11 +78,9 @@ function setMenu() {
             "visibility": "visible",
             "opacity": "1"
         });
-        $(".panel").animate({width: "200vw", height: "200vh"}, 1000, "swing");
         //---------------------------------
-        setTimeout(function() {
-            $(".panelHeader").css({"top": "0"});
-        }, 500);
+        if (responsive == "wide") $(".panelHeader").css({"top": "100px"});
+        else $(".panelHeader").css({"top": "50px"});
     });
 }
 
@@ -85,16 +92,15 @@ function setPanel() {
 
 function hidePanel(dest) {
     $(".panel").css({"opacity": "0"});
-    setTimeout(function() { $(".panel").css({"visibility": "hidden"}); }, 1000);
-    $(".panel").animate({width: "0", height: "0"}, 1000, "swing");
+    setTimeout(function() { $(".panel").css({"visibility": "hidden"}); }, 500);
     //---------------------------------
-    $(".panelHeader").css({"top": "-200px"});
+    $(".panelHeader").css({"top": "-100px"});
     //---------------------------------
-    if (dest) scrollTo(dest);
+    if (dest) scrollingTo(dest);
 }
 
-function scrollTo(dest) {
-    $('body').animate({scrollTop: $(dest).offset().top}, 1000);
+function scrollingTo(dest) {
+    $('body, html').animate({scrollTop: $(dest).offset().top}, 1000);
 }
 
 function setAboutBar() {
@@ -168,7 +174,7 @@ function setAnimations() {
     $(".titleSplash").delay(totalDelay).animate({opacity: "1"}, animSpeed);
     totalDelay += animSpeed * 1.5;
     //---------------------------------
-    $(".aboutContent p").delay(totalDelay).animate({opacity: "1"}, animSpeed);
+    $(".aboutInfo p").delay(totalDelay).animate({opacity: "1"}, animSpeed);
     totalDelay += animSpeed;
     //---------------------------------
     setTimeout(function() {

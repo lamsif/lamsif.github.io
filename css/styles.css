@@ -9,10 +9,6 @@
 }
 /*---------------------------------*/
 @media screen and (max-width: 480px) {
-    .responsive {
-        content: "small";
-    }
-
     .aboutContent {
         padding-top: 50px;
     }
@@ -49,11 +45,7 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 700px) {
-    .responsive {
-        content: "small";
-    }
-
+@media screen and (min-width: 480px) and (max-width: 768px) {
     .aboutContent {
         padding-top: 50px;
     }
@@ -90,11 +82,7 @@
     }
 }
 
-@media screen and (min-width: 700px) {
-    .responsive {
-        content: "wide";
-    }
-
+@media screen and (min-width: 768px) {
     .aboutContent {
         padding-top: 100px;
     }
@@ -154,19 +142,18 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .aboutHeader {
     position: absolute;
     top: -100px;
-    left: 50%;
-    margin-left: -240px;
+    width: 100%;
     z-index: 2;
 }
 
-.aboutHeader ul{
+.aboutHeader ul {
     list-style-type: none;
+    text-align: center;
 }
 
-.aboutHeader li{
-    float: left;
+.aboutHeader li {
+    display: inline-block;
     width: 120px;
-    text-align: center;
 }
 
 .aboutHeader a{
@@ -191,12 +178,12 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .aboutContent {
     position: relative;
     text-align: center;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
 }
 
 .aboutHello {
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     height: 35px;
 }
 
@@ -209,7 +196,11 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
     right: 0;
 }
 
-.aboutContent p {
+.aboutInfo {
+    margin-top: 12px;
+}
+
+.aboutInfo p {
     color: #FFFFFF;
     font-size: 20px;
     line-height: 1;
@@ -218,8 +209,8 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 }
 
 .aboutPic {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     transform: scale(0, 0);
     transition: transform 0.5s;
 }
@@ -264,24 +255,22 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 .panel {
     visibility: hidden;
     position: fixed;
-    width: 0;
-    height: 0;
-    top: -50vh;
-    right: -50vw;
-    border-radius: 75%;
+    width: 100%;
+    height: 100%;
     background-color: #1E2022;
     z-index: 3;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
 }
 
 .panelClose {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 35px;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 4;
 }
 
 .panelClose img {
@@ -290,24 +279,19 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 }
 
 .panelHeader {
-    width: fit-content;
-    height: fit-content;
-    position: fixed;
-    margin: auto;
-    top: -200px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: top 0.5s ease-out;
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    transition: top 0.5s linear;
+    z-index: 3;
 }
 
 .panelHeader ul{
     list-style-type: none;
+    text-align: center;
 }
 
 .panelHeader li{
-    width: fit-content;
-    height: fit-content;
     margin: 25px auto;
 }
 
