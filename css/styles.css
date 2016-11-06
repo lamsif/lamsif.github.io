@@ -434,9 +434,9 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 }
 
 .skillsBorder {
+    height: 380px;
     background-color: #bcbcad;
     margin-top: 80px;
-    padding-bottom: 20px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     transition: all 0.3s cubic-bezier(0.53, 0.01, 0.35, 1);
 }
@@ -448,7 +448,7 @@ body, div, ul, li, img, p, h1, h2, h3, h4, h5 {
 
 .skillsBorder h3 {
     width: 100%;
-    color: #31312b;
+    color: #23231f;
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 20px;
