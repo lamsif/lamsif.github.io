@@ -232,3 +232,27 @@ function setAnimations() {
         }, { offset: '100%'});
     });
 }
+//---------------------------------
+function sendEmail() {
+    var fullnameVal = $('#fullname').val();
+    var emailVal = $('#email').val();
+    var messageVal = $('#message').val();
+    var appVal = 'Portfolio';
+    if (fullnameVal && emailVal && messageVal) {
+        $.ajax({
+            method: 'POST',
+            url: 'http://localhost/send.php',
+            data: { fullname: fullnameVal, email: emailVal, message: messageVal, app: appVal },
+            success: function(result) {
+                if (result.indexOf('error') == -1) {
+                    alert('Message sent!');
+                    //---------------------------------
+                    $('#fullname').val('');
+                    $('#email').val('');
+                    $('#message').val('');
+                }
+                else alert('Error!\nTry again');
+            }
+        });
+    } else { alert('Missing fields!'); }
+}
