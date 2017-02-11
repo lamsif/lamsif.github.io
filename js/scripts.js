@@ -239,19 +239,23 @@ function sendEmail() {
     var messageVal = $('#message').val();
     var appVal = 'Portfolio';
     if (fullnameVal && emailVal && messageVal) {
-        $.ajax({
-            method: 'POST',
-            url: 'http://siirol.netii.net/send.php',
+		$.ajax({
+            url: "http://siirol.netii.net/send.php",
+            type: "POST",
+            crossDomain: true,
             data: { fullname: fullnameVal, email: emailVal, message: messageVal, app: appVal },
-            success: function(result) {
-                if (result.indexOf('error') == -1) {
-                    alert('Message sent!');
-                    //---------------------------------
-                    $('#fullname').val('');
-                    $('#email').val('');
-                    $('#message').val('');
-                }
-                else alert('Error!\nTry again');
+            success: function (response) {
+                if (response.indexOf('error') == -1) {
+					alert('Message sent!');
+					//---------------------------------
+					$('#fullname').val('');
+					$('#email').val('');
+					$('#message').val('');
+				}
+				else alert('Error!\nTry again');
+            },
+            error: function () {
+                alert('Error!\nTry again');
             }
         });
     } else { alert('Missing fields!'); }
