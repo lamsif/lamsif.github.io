@@ -241,7 +241,7 @@ function sendEmail() {
     if (fullnameVal && emailVal && messageVal) {
         $.ajax({
             method: 'POST',
-            url: 'http://localhost/send.php',
+            url: 'http://siirol.netii.net/send.php',
             data: { fullname: fullnameVal, email: emailVal, message: messageVal, app: appVal },
             success: function(result) {
                 if (result.indexOf('error') == -1) {
