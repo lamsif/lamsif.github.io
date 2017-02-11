@@ -240,7 +240,7 @@ function sendEmail() {
     var appVal = 'Portfolio';
     if (fullnameVal && emailVal && messageVal) {
 		$.ajax({
-            url: "http://siirol.netii.net/send.php",
+            url: "https://siirol.000webhostapp.com/send.php",
             type: "POST",
             crossDomain: true,
             data: { fullname: fullnameVal, email: emailVal, message: messageVal, app: appVal },
