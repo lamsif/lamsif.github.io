@@ -165,7 +165,7 @@ function setAnimations() {
     //---------------------------------
     setTimeout(function() {
         $(".aboutTitle").typed({
-            strings: ["Lamtaoui", "Lamraoui Sifeddine"],
+            strings: ["Lamraoui Sifeddine"],
             typeSpeed: 0
         });
     }, totalDelay);
