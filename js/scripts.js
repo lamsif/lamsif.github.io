@@ -169,7 +169,7 @@ function setAnimations() {
             typeSpeed: 0
         });
     }, totalDelay);
-    totalDelay += animSpeed * 2;
+    totalDelay += animSpeed * 2.25;
     //---------------------------------
     $(".titleSplash").delay(totalDelay).animate({opacity: "1"}, animSpeed);
     totalDelay += animSpeed * 1.5;
