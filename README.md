@@ -1,3 +1,3 @@
 # LamSif Website
 
-Portfolio of Lamraoui Sifeddine, a Full Stack Javascript Developer
+Portfolio of Lamraoui Sifeddine, a Full Stack JavaScript Developer
